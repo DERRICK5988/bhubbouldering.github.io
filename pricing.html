@@ -18,46 +18,24 @@
       ><link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script> 
-    $(function(){
-      $("#header").load("header.html"); 
-    });
-    $(function(){
-      $("#footer").load("footer.html"); 
-    });
-    </script> 
+    <script>
+      $(function () {
+        $("#header").load("header.html");
+      });
+      $(function () {
+        $("#footer").load("footer.html");
+      });
+    </script>
   </head>
   <body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper" class="divided">
-      <!-- <header id="header" class="alt">
-        <a href="index.html" class="logo"
-          ><p class="strong">BHub Bouldering</p></a
-        >
-        <nav id="nav">
-          <ul>
-            <li class="special">
-              <a href="#menu" class="menuToggle"><span>Menu</span></a>
-              <div id="menu">
-                <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="pricing.html">Pricing</a></li>
-                  <li><a href="footer.html">Test</a></li>
-                  <li><a href="policy.html">Policy</a></li>
-                  <li><a href="contact.html">Contact Us</a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </header> -->
       <div id="header"></div>
-         
 
       <!-- Intro -->
       <section class="intro">
         <header>
-          <h1>Discover the value in every ascent</h1>
+          <h1 class="global-h1">Discover the value in every ascent</h1>
           <!-- <ul class="actions">
             <li>
               <a href="#first" class="arrow scrolly"
@@ -76,161 +54,161 @@
       <!-- Section -->
       <section id="first">
         <header>
-          <h2>Single Entries</h2>
-		  <p>
-			Our single day entries grant <strong>one individual access</strong> to all our facilities from the time of opening until we close.
-		  </p>
-        </header>
-		
-        <div class="content">
-          <!-- <p>
+          <h2 class="global-h2">Single Entries</h2>
+          <p>
             Our single day entries grant
             <strong>one individual access</strong> to all our facilities from
             the time of opening until we close.
-          </p> -->
-          <!-- <p>
-            Our single day entries grant
-            <strong>one individual access</strong> to all our facilities from
-            the time of opening until we close.
-          </p> -->
-          <dl>
-            <dt>Sunshine Ascent - 11 am - 5 pm, RM30</dt>
-            <!-- <dd>- 11 am - 5 pm, RM30</dd> -->
-            <dt>Golden Hour - 5 pm onwards, RM38</dt>
-            <!-- <dd>- 5 pm onwards, RM38</dd> -->
-            <dt>Nightowl - 9 pm onwards, RM28</dt>
-            <!-- <dd>- 9 pm onwards, RM28</dd> -->
-          </dl>
-          <!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-
-        </div>
-      </section>
-
-      <!-- Section -->
-      <section>
-        <header>
-          <h2>Value Pack</h2>
-		  <p>
-			Purchase a pack of passes to get more value and fuel your new climbing habit!<br/>
-      Share the thrill! Grab friends and enjoy  at our climbing gym.
-		  </p>
-        </header>
-        <div class="content">   
-          <p>
-            - Shareable with friends and family (host must be present to share passes).<br/>
-            - Valid for 12 Months from the date of purchase.
-            </p>
-          <dl>
-            <dt>10 Day passes - RM320</dt>
-            <!-- <dd>- RM320</dd> -->
-            <dt>30 Day passes - RM600</dt>
-            <!-- <dd>- RM600</dd> -->
-          </dl>
-        </div>
-      </section>
-
-      <!-- Section -->
-      <section>
-        <header>
-          <h2>Memberships</h2>
-          <p>
-            Want unlimited access to our climbing walls and fitness area with flexible commitments? Our Monthly Recurring Membership would be perfect for you.
           </p>
         </header>
         <div class="content">
-          <!-- <p>Get more value to fuel your new climbing habit!</p> -->
-          <dl>
+          <!-- <dl>
+            <dt>Sunshine Ascent - 11 am - 5 pm, RM30</dt>
+            <dt>Golden Hour - 5 pm onwards, RM38</dt>
+            <dt>Nightowl - 9 pm onwards, RM28</dt>
+          </dl> -->
+          <!-- <h4>Table</h4> -->
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Package</th>
+                  <th></th>
+                  <th>Price (RM)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Sunshine Ascent</td>
+                  <td>11am - 5pm</td>
+                  <td>28</td>
+                </tr>
+                <tr>
+                  <td>Golden Hour</td>
+                  <td>5pm - 9pm</td>
+                  <td>38</td>
+                </tr>
+                <tr>
+                  <td>Nightowl</td>
+                  <td>9 pm onwards</td>
+                  <td>24</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section>
+        <header>
+          <h2 class="global-h2">Value Pack</h2>
+          <p>
+            Purchase a pack of passes to get more value and fuel your new
+            climbing habit!<br />
+            Share the thrill! Grab friends and enjoy at our climbing gym.
+          </p>
+        </header>
+        <div class="content">
+          <table>
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th></th>
+                <th>Price (RM)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10 Days</td>
+                <td>
+                  - Valid for 3 months<br />
+                  - Host presence required for unlimited sharing passes<br />
+                  - Allow carry forward
+                </td>
+                <td>388</td>
+              </tr>
+              <tr>
+                <td>25 Days</td>
+                <td>
+                  - Valid for 6 months<br />
+                  - Host presence required for unlimited sharing passes<br />
+                  - Allow carry forward
+                </td>
+                <td>588</td>
+              </tr>
+              <tr>
+                <td>30 Days</td>
+                <td>
+                  - Valid for 9 months<br />
+                  - Host presence required for unlimited sharing passes<br />
+                  - Allow carry forward
+                </td>
+                <td>799</td>
+              </tr>
+            </tbody>
+            <!-- <tfoot>
+              <tr>
+                <td colspan="0"></td>
+                <td>100.00</td>
+              </tr>
+            </tfoot> -->
+          </table>
+          <!-- <p>
+            Condition:<br />
+            - Shareable with friends and family (host must be present to share
+            passes).<br />
+            - Valid for 12 Months from the date of purchase.
+          </p> -->
+        </div>
+      </section>
+
+      <!-- Section -->
+      <section>
+        <header>
+          <h2 class="global-h2">Memberships</h2>
+          <p>
+            Want unlimited access to our climbing walls and fitness area with
+            flexible commitments? Our Monthly Recurring Membership would be
+            perfect for you.
+          </p>
+        </header>
+        <div class="content">
+          <!-- <dl>
             <dt>Monthly Recurring - RM185</dt>
-            <!-- <dd>- RM185</dd> -->
             <dt>6-Month Membership - RM940</dt>
-            <!-- <dd>- RM940</dd> -->
             <dt>12-Month Membership - RM1770</dt>
-            <!-- <dd>- RM1770</dd> -->
-          </dl>
-          <!-- Section -->
-          <!-- <section>
-            <header>
-              <h3>Erat aliquam</h3>
-              <p>
-                Want unlimited access to our climbing walls and fitness area with flexible commitments? Our Monthly Recurring Membership would be perfect for you.
-              </p>
-            </header>
-            <div class="content">
-
-              <div class="gallery">
-                <a href="images/gallery/fulls/01.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/01.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/02.jpg"
-                  ><img src="images/gallery/thumbs/02.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/03.jpg"
-                  ><img src="images/gallery/thumbs/03.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/04.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/04.jpg" alt=""
-                /></a>
-              </div>
-            </div>
-          </section> -->
-
-          <!-- Section -->
-          <!-- <section>
-            <header>
-              <h3>Nisl consequat</h3>
-              <p>
-                Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin
-                aliquam sed facilisis ante interdum congue. Integer mollis, nisl
-                amet convallis, porttitor magna ullamcorper, amet mauris. Ut
-                magna finibus nisi nec lacinia ipsum maximus.
-              </p>
-            </header>
-            <div class="content">
-              <div class="gallery">
-                <a href="images/gallery/fulls/05.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/05.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/06.jpg"
-                  ><img src="images/gallery/thumbs/06.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/07.jpg"
-                  ><img src="images/gallery/thumbs/07.jpg" alt=""
-                /></a>
-              </div>
-            </div>
-          </section> -->
-
-          <!-- Section -->
-          <!-- <section>
-            <header>
-              <h3>Lorem gravida</h3>
-              <p>
-                Proin aliquam facilisis ante interdum. Sed nulla amet lorem
-                feugiat tempus aenean ornare velit lacus, ac varius sed enim
-                lorem ullamcorper dolore. ac varius enim lorem ullamcorper
-                dolore. Proin aliquam facilisis.
-              </p>
-            </header>
-            <div class="content">
-              <div class="gallery">
-                <a href="images/gallery/fulls/08.jpg" class="portrait"
-                  ><img src="images/gallery/thumbs/08.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/09.jpg" class="portrait"
-                  ><img src="images/gallery/thumbs/09.jpg" alt=""
-                /></a>
-                <a href="images/gallery/fulls/10.jpg" class="landscape"
-                  ><img src="images/gallery/thumbs/10.jpg" alt=""
-                /></a>
-              </div>
-            </div>
-          </section> -->
+          </dl> -->
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Package</th>
+                  <th>Price (RM)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Monthly Recurring</td>
+                  <td>RM 185</td>
+                </tr>
+                <tr>
+                  <td>6-Month Membership</td>
+                  <td>RM 940</td>
+                </tr>
+                <tr>
+                  <td>12-Month Membership</td>
+                  <td>RM 1770</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
       <div id="footer"></div>
-</div>
-      <!-- Section -->
-      <!-- <section>
+    </div>
+    <!-- Section -->
+    <!-- <section>
         <header>
           <h2>Duis sed adpiscing veroeros amet</h2>
         </header>
@@ -247,8 +225,8 @@
         </div>
       </section> -->
 
-      <!-- Elements -->
-      <!--
+    <!-- Elements -->
+    <!--
 					<section>
 						<header>
 							<h2>Elements</h2>
@@ -515,8 +493,8 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 					</section>
 				-->
 
-      <!-- Section -->
-      <!-- <section>
+    <!-- Section -->
+    <!-- <section>
         <header>
           <h2>Get in touch</h2>
         </header>
@@ -592,13 +570,13 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
         </footer>
       </section> -->
 
-      <!-- Copyright -->
-      <!-- <div class="copyright">
+    <!-- Copyright -->
+    <!-- <div class="copyright">
         &copy; Untitled. All rights reserved. Design:
         <a href="https://html5up.net">HTML5 UP</a>.
       </div> -->
-      <!-- Footer -->
-      <!-- <footer class="Footer-Wrapper style1 align-center">
+    <!-- Footer -->
+    <!-- <footer class="Footer-Wrapper style1 align-center">
         <div class="inner large">
           <ul class="icons">
             <li>
@@ -620,7 +598,6 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
           <p>&copy; Copyright 2024 | BHub Bouldering | All Rights Reserved.</p>
         </div>
       </footer> -->
-     
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>

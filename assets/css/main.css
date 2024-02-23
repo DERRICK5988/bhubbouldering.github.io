@@ -1,94 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,700,300i,600i,700i|Raleway:600,800");
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+
 
 article,
 aside,
@@ -175,14 +88,14 @@ html {
   box-sizing: border-box;
 }
 
-*,
+/* *,
 *:before,
 *:after {
   box-sizing: inherit;
-}
+} */
 
 body {
-  background: #ffffff;
+  background: azure;
 }
 
 body.is-preload *,
@@ -229,7 +142,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  /* background-color: azure; */
   color: #000000;
 }
 
@@ -248,7 +161,6 @@ a {
   -webkit-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  text-decoration: underline;
 }
 
 a:hover {
@@ -271,53 +183,6 @@ p {
 
 p.major {
   font-size: 1.25rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-  line-height: 1.375;
-  letter-spacing: -0.05em;
-  margin: 0 0 1rem 0;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-}
-
-h5 {
-  font-size: 0.9rem;
-}
-
-h6 {
-  font-size: 0.7rem;
 }
 
 sub {
@@ -424,14 +289,14 @@ b {
   color: #000000;
 }
 
-h1,
+/* h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   color: #000000;
-}
+} */
 
 blockquote {
   border-left-color: rgba(0, 0, 0, 0.2);
@@ -2308,7 +2173,7 @@ button.primary,
 .button.primary {
   background-color: #000000;
   box-shadow: none;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 input[type="submit"].primary:hover,
@@ -2595,7 +2460,7 @@ select {
 
 select option {
   color: #000000;
-  background: #ffffff;
+  background: azure;
 }
 
 input[type="checkbox"] + label,
@@ -2612,7 +2477,7 @@ input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
   background-color: #000000;
   border-color: #000000;
-  color: #ffffff;
+  color: azure;
 }
 
 input[type="checkbox"]:focus + label:before,
@@ -6361,7 +6226,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style1 {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -6386,11 +6251,11 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 input,
 .gallery.style1 select,
 .gallery.style1 textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 a {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 a:hover {
@@ -6399,7 +6264,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style1 strong,
 .gallery.style1 b {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 h1,
@@ -6408,7 +6273,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 h4,
 .gallery.style1 h5,
 .gallery.style1 h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 blockquote {
@@ -6431,7 +6296,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 .gallery.style1 input[type="submit"]:hover,
@@ -6458,7 +6323,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 input[type="button"].primary,
 .gallery.style1 button.primary,
 .gallery.style1 .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -6692,7 +6557,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style2 {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -6705,11 +6570,11 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 input,
 .gallery.style2 select,
 .gallery.style2 textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 a {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 a:hover {
@@ -6718,7 +6583,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style2 strong,
 .gallery.style2 b {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 h1,
@@ -6727,7 +6592,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 h4,
 .gallery.style2 h5,
 .gallery.style2 h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 blockquote {
@@ -6750,7 +6615,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 .gallery.style2 input[type="submit"]:hover,
@@ -6777,7 +6642,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 input[type="button"].primary,
 .gallery.style2 button.primary,
 .gallery.style2 .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -7281,7 +7146,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .wrapper.style2 > .inner {
   padding: 5.25rem 3.5rem 3.25rem 3.5rem;
-  background-color: #ffffff;
+  background-color: azure;
   border-radius: 0.5rem;
   margin: 0 auto;
   max-width: 100%;
@@ -8255,7 +8120,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
   opacity: 1;
   background-color: inherit;
   width: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   padding-top: 3em;
 }
 
@@ -8274,17 +8139,17 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #wrapper > .invert {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert input,
 #wrapper > .invert select,
 #wrapper > .invert textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert a {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert a:hover {
@@ -8293,7 +8158,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #wrapper > .invert strong,
 #wrapper > .invert b {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert h1,
@@ -8302,7 +8167,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #wrapper > .invert h4,
 #wrapper > .invert h5,
 #wrapper > .invert h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert blockquote {
@@ -8329,7 +8194,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #wrapper > .invert .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #wrapper > .invert input[type="submit"]:hover,
@@ -8356,7 +8221,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #wrapper > .invert input[type="button"].primary,
 #wrapper > .invert button.primary,
 #wrapper > .invert .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -8378,7 +8243,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #wrapper > .invert label {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert input[type="text"],
@@ -8410,12 +8275,12 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #wrapper > .invert select option {
   color: #000000;
-  background: #ffffff;
+  background: azure;
 }
 
 #wrapper > .invert input[type="checkbox"] + label,
 #wrapper > .invert input[type="radio"] + label {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert input[type="checkbox"] + label:before,
@@ -8425,8 +8290,8 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #wrapper > .invert input[type="checkbox"]:checked + label:before,
 #wrapper > .invert input[type="radio"]:checked + label:before {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: azure;
+  border-color: azure;
   color: #000000;
 }
 
@@ -8437,19 +8302,19 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #wrapper > .invert ::-webkit-input-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #wrapper > .invert :-moz-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #wrapper > .invert ::-moz-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #wrapper > .invert :-ms-input-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #wrapper > .invert .icon.style2:before {
@@ -8472,7 +8337,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #wrapper > .invert header p {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert table tbody tr {
@@ -8488,7 +8353,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #wrapper > .invert table th {
-  color: #ffffff;
+  color: azure;
 }
 
 #wrapper > .invert table thead {
@@ -8627,197 +8492,6 @@ body.is-preload .items.onload-fade-in > * > .inner {
   box-shadow: none !important;
 }
 
-/* Header */
-#header {
-  -moz-transition: background-color 0.2s ease;
-  -webkit-transition: background-color 0.2s ease;
-  -ms-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-  background: #2e3842;
-  background-color: #0a0a0a;
-  height: 3em;
-  left: 0;
-  line-height: 3em;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10000;
-}
-
-#header .logo {
-  border: 0;
-  display: inline-block;
-  height: inherit;
-  line-height: inherit;
-  padding: 0 1.5em;
-}
-
-/* #header .logo img {
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		display: inline-block;
-		display: inline-block;
-		line-height: 1.65em;
-		margin-right: 0.325em;
-		padding: 0 0.125em 0 0.375em;
-		border: 0;
-		width: 40px;
-		height: 30px;
-		border-radius: 50%;
-		margin-top: 1em;
-	} */
-
-/* #header .logo:hover img {
-			background-color: #2701ff;
-		}
-
-		#header .logo:active img {
-			background-color: #ff8400;
-		} */
-#header .logo strong {
-  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-  display: inline-block;
-  line-height: 1.65em;
-  margin-right: 0.325em;
-  padding: 0 0.125em 0 0.375em;
-  border: 0;
-  padding-right: 10px;
-  padding-left: 10px;
-  border: 0;
-  color: #fff;
-  /* display: block; */
-  font-size: 0.8em;
-  letter-spacing: 0.225em;
-  text-transform: uppercase;
-}
-
-#header .logo:hover strong {
-  background-color: #ff8400;
-}
-
-#header .logo:active strong {
-  background-color: #ff8400;
-}
-
-#header h1 {
-  -moz-transition: opacity 0.2s ease;
-  -webkit-transition: opacity 0.2s ease;
-  -ms-transition: opacity 0.2s ease;
-  transition: opacity 0.2s ease;
-  height: inherit;
-  left: 1.25em;
-  line-height: inherit;
-  position: absolute;
-  top: 0;
-}
-
-#header h1 a {
-  border: 0;
-  display: block;
-  height: inherit;
-  line-height: inherit;
-}
-
-@media screen and (max-width: 736px) {
-  #header h1 a {
-    font-size: 0.8em;
-  }
-}
-
-#header nav {
-  height: inherit;
-  line-height: inherit;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-#header nav > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-#header nav > ul > li {
-  display: inline-block;
-  padding: 0;
-}
-
-#header nav > ul > li > a {
-  border: 0;
-  color: #fff;
-  display: block;
-  font-size: 0.8em;
-  letter-spacing: 0.225em;
-  padding: 0 1.5em;
-  text-transform: uppercase;
-}
-
-#header nav > ul > li > a.menuToggle {
-  outline: 0;
-  position: relative;
-}
-
-#header nav > ul > li > a.menuToggle:after {
-  background-image: url("images/bars.svg");
-  background-position: right center;
-  background-repeat: no-repeat;
-  content: "";
-  display: inline-block;
-  height: 3.75em;
-  vertical-align: top;
-  width: 2em;
-}
-
-@media screen and (max-width: 736px) {
-  #header nav > ul > li > a.menuToggle {
-    padding: 0 1.5em;
-  }
-
-  #header nav > ul > li > a.menuToggle span {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 736px) {
-  #header nav > ul > li > a {
-    padding: 0 0 0 1.5em;
-  }
-}
-
-#header nav > ul > li:first-child {
-  margin-left: 0;
-}
-
-#header.alt {
-  -moz-transition: opacity 2.5s ease;
-  -webkit-transition: opacity 2.5s ease;
-  -ms-transition: opacity 2.5s ease;
-  transition: opacity 2.5s ease;
-  -moz-transition-delay: 0.75s;
-  -webkit-transition-delay: 0.75s;
-  -ms-transition-delay: 0.75s;
-  transition-delay: 0.75s;
-  -moz-animation: none;
-  -webkit-animation: none;
-  -ms-animation: none;
-  animation: none;
-  background-color: #2e3842;
-  box-shadow: none;
-  position: absolute;
-}
-
-#header.alt h1 {
-  pointer-events: none;
-  opacity: 0;
-}
-
 /* Banner */
 
 #banner {
@@ -8889,7 +8563,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
   -webkit-transition-delay: 0.25s;
   -ms-transition-delay: 0.25s;
   transition-delay: 0.25s;
-  background: #fff;
+  background: azure;
   content: "";
   display: block;
   height: 2px;
@@ -9028,96 +8702,3 @@ body.is-preload #banner:after {
   opacity: 1;
 }
 
-/* Menu */
-#menu {
-  -moz-transform: translateX(20em);
-  -webkit-transform: translateX(20em);
-  -ms-transform: translateX(20em);
-  transform: translateX(20em);
-  -moz-transition: -moz-transform 0.5s ease;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  -ms-transition: -ms-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  -webkit-overflow-scrolling: touch;
-  background: #ff8400;
-  color: #0a0a0a;
-  height: 100%;
-  max-width: 80%;
-  overflow-y: auto;
-  padding: 3em 2em;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 20em;
-  z-index: 10002;
-}
-
-#menu ul {
-  list-style: none;
-  padding: 0;
-}
-
-#menu ul > li {
-  border-top: solid 1px rgba(0, 0, 0, 0.125);
-  margin: 0.5em 0 0 0;
-  padding: 0.5em 0 0 0;
-}
-
-#menu ul > li:first-child {
-  border-top: 0 !important;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-#menu ul > li > a {
-  border: 0;
-  color: inherit;
-  display: block;
-  font-size: 0.8em;
-  letter-spacing: 0.225em;
-  outline: 0;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-@media screen and (max-width: 736px) {
-  #menu ul > li > a {
-    line-height: 3em;
-  }
-}
-
-#menu .close {
-  background-image: url("images/close.svg");
-  background-position: 4.85em 1em;
-  background-repeat: no-repeat;
-  border: 0;
-  cursor: pointer;
-  display: block;
-  height: 3em;
-  position: absolute;
-  right: 0;
-  top: 0;
-  vertical-align: middle;
-  width: 7em;
-}
-
-@media screen and (max-width: 736px) {
-  #menu {
-    padding: 3em 1.5em;
-  }
-}
-
-body.is-menu-visible #page-wrapper {
-  opacity: 0.35;
-}
-
-body.is-menu-visible #page-wrapper:before {
-  display: block;
-}
-
-body.is-menu-visible #menu {
-  -moz-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-}

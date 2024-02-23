@@ -68,6 +68,16 @@ textarea {
 
 /* Basic */
 
+.footer-font-style {
+  color: #000000;
+  font-size: smaller;
+}
+
+.footer-style-h3 {
+  color: #000000;
+  font-weight: 600;
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -83,14 +93,8 @@ html {
   box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
 body {
-  background: #ffffff;
+  background: azure;
 }
 
 body.is-preload *,
@@ -137,7 +141,7 @@ html {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: azure;
   /* color: #000000; */
 }
 
@@ -156,11 +160,6 @@ a {
   -webkit-transition: color 0.2s ease-in-out;
   -ms-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
-  text-decoration: underline;
-}
-
-a:hover {
-  text-decoration: none;
 }
 
 strong,
@@ -179,53 +178,6 @@ p {
 
 p.major {
   font-size: 1.25rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-  line-height: 1.375;
-  letter-spacing: -0.05em;
-  margin: 0 0 1rem 0;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h1 {
-  font-size: 3.5rem;
-  line-height: 1.2;
-}
-
-h2 {
-  font-size: 2.25rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-h4 {
-  font-size: 1.1rem;
-}
-
-h5 {
-  font-size: 0.9rem;
-}
-
-h6 {
-  font-size: 0.7rem;
 }
 
 sub {
@@ -279,6 +231,10 @@ hr.major {
   margin: 3.5rem 0;
 }
 
+.align-center {
+  text-align: center;
+}
+
 .align-left {
   text-align: left;
 }
@@ -325,15 +281,6 @@ a:hover {
 
 strong,
 b {
-  color: #000000;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   color: #000000;
 }
 
@@ -2212,7 +2159,7 @@ button.primary,
 .button.primary {
   background-color: #000000;
   box-shadow: none;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 input[type="submit"].primary:hover,
@@ -2499,7 +2446,7 @@ select {
 
 select option {
   color: #000000;
-  background: #ffffff;
+  background: azure;
 }
 
 input[type="checkbox"] + label,
@@ -2516,7 +2463,7 @@ input[type="checkbox"]:checked + label:before,
 input[type="radio"]:checked + label:before {
   background-color: #000000;
   border-color: #000000;
-  color: #ffffff;
+  color: azure;
 }
 
 input[type="checkbox"]:focus + label:before,
@@ -2693,7 +2640,7 @@ ol li {
 
 ul {
   list-style: disc;
-  margin: 0 0 2rem 0;
+  margin: 0 0 0.5rem 0;
   padding-left: 1rem;
 }
 
@@ -2876,7 +2823,7 @@ ul.icons {
   cursor: default;
   list-style: none;
   padding-left: 0;
-  padding-top: 50px;
+  padding-top: 10px;
 }
 
 ul.icons li {
@@ -2895,7 +2842,7 @@ article.special {
   text-align: center;
 }
 
-header p {
+/* header p {
   position: relative;
   margin: -0.65rem 0 1.5rem 0;
   font-style: italic;
@@ -2921,111 +2868,7 @@ header h6 + p {
 
 header p {
   color: rgba(0, 0, 0, 0.75);
-}
-
-/* Table */
-
-.table-footer-wrapper {
-  -webkit-overflow-scrolling: touch;
-  margin: 0 0 2rem 0;
-  overflow-x: auto;
-}
-
-.table-footer-wrapper > table {
-  margin-bottom: 0;
-}
-
-table {
-  margin: 0 0 2rem 0;
-  width: 100%;
-}
-
-table tbody tr {
-  border: solid 1px;
-  border-left: 0;
-  border-right: 0;
-}
-
-table td {
-  padding: 0.75rem 0.75rem;
-}
-
-table th {
-  font-size: 0.9rem;
-  font-weight: 400;
-  padding: 0 0.75rem 0.75rem 0.75rem;
-  text-align: left;
-}
-
-table thead {
-  border-bottom: solid 2px;
-}
-
-table tfoot {
-  border-top: solid 2px;
-}
-
-table.alt {
-  border-collapse: separate;
-}
-
-table.alt tbody tr td {
-  border: solid 1px;
-  border-left-width: 0;
-  border-top-width: 0;
-}
-
-table.alt tbody tr td:first-child {
-  border-left-width: 1px;
-}
-
-table.alt tbody tr:first-child td {
-  border-top-width: 1px;
-}
-
-table.alt thead {
-  border-bottom: 0;
-}
-
-table.alt tfoot {
-  border-top: 0;
-}
-
-table.fixed {
-  table-layout: fixed;
-}
-
-table tbody tr {
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
-table tbody tr:nth-child(2n + 1) {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-table tbody tr.alt {
-  background-color: rgba(0, 0, 0, 0.05) !important;
-}
-
-table th {
-  color: #000000;
-}
-
-table thead {
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-}
-
-table tfoot {
-  border-top-color: rgba(0, 0, 0, 0.2);
-}
-
-table.alt tbody tr td {
-  border-color: rgba(0, 0, 0, 0.2);
-}
-
-table.uniform tbody tr:nth-child(2n + 1) {
-  background-color: transparent;
-}
+} */
 
 /* Banner (transitions) */
 
@@ -6266,7 +6109,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style1 {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
   -moz-align-items: center;
   -webkit-align-items: center;
   -ms-align-items: center;
@@ -6291,11 +6134,11 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 input,
 .gallery.style1 select,
 .gallery.style1 textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 a {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 a:hover {
@@ -6304,7 +6147,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style1 strong,
 .gallery.style1 b {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 h1,
@@ -6313,7 +6156,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 h4,
 .gallery.style1 h5,
 .gallery.style1 h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style1 blockquote {
@@ -6336,7 +6179,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 .gallery.style1 input[type="submit"]:hover,
@@ -6363,7 +6206,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style1 input[type="button"].primary,
 .gallery.style1 button.primary,
 .gallery.style1 .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -6597,7 +6440,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style2 {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
   display: -moz-flex;
   display: -webkit-flex;
   display: -ms-flex;
@@ -6610,11 +6453,11 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 input,
 .gallery.style2 select,
 .gallery.style2 textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 a {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 a:hover {
@@ -6623,7 +6466,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .gallery.style2 strong,
 .gallery.style2 b {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 h1,
@@ -6632,7 +6475,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 h4,
 .gallery.style2 h5,
 .gallery.style2 h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 .gallery.style2 blockquote {
@@ -6655,7 +6498,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 .gallery.style2 input[type="submit"]:hover,
@@ -6682,7 +6525,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 .gallery.style2 input[type="button"].primary,
 .gallery.style2 button.primary,
 .gallery.style2 .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -7133,8 +6976,8 @@ body.is-preload .gallery.onload-fade-in article .image img {
 /* footer-wrapper (style1) */
 
 #footer-wrapper {
-  background-color: #eeeeee;
-  color: #eeeeee;
+  background-color: #000000;
+  color: #000000;
 }
 
 .footer-wrapper.style1 > .inner {
@@ -7145,8 +6988,8 @@ body.is-preload .gallery.onload-fade-in article .image img {
 }
 
 .footer-wrapper.style1 > .inner.large {
-  height: 200px;
-  padding: 7rem 6rem 7rem 3.5rem;
+  height: 100px;
+  padding: 3rem 6rem 7rem 3.5rem;
   width: 80rem;
 }
 
@@ -7191,7 +7034,7 @@ body.is-preload .gallery.onload-fade-in article .image img {
 
 .footer-wrapper.style2 > .inner {
   padding: 5.25rem 3.5rem 3.25rem 3.5rem;
-  background-color: #ffffff;
+  background-color: azure;
   border-radius: 0.5rem;
   margin: 0 auto;
   max-width: 100%;
@@ -8184,17 +8027,17 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #footer-wrapper > .invert {
   background-color: #000000;
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert input,
 #footer-wrapper > .invert select,
 #footer-wrapper > .invert textarea {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert a {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert a:hover {
@@ -8203,7 +8046,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #footer-wrapper > .invert strong,
 #footer-wrapper > .invert b {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert h1,
@@ -8212,7 +8055,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #footer-wrapper > .invert h4,
 #footer-wrapper > .invert h5,
 #footer-wrapper > .invert h6 {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert blockquote {
@@ -8239,7 +8082,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #footer-wrapper > .invert .button {
   background-color: transparent;
   box-shadow: inset 0 0 0 1px white;
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #footer-wrapper > .invert input[type="submit"]:hover,
@@ -8266,7 +8109,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 #footer-wrapper > .invert input[type="button"].primary,
 #footer-wrapper > .invert button.primary,
 #footer-wrapper > .invert .button.primary {
-  background-color: #ffffff;
+  background-color: azure;
   box-shadow: none;
   color: #000000 !important;
 }
@@ -8288,7 +8131,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #footer-wrapper > .invert label {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert input[type="text"],
@@ -8320,12 +8163,12 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #footer-wrapper > .invert select option {
   color: #000000;
-  background: #ffffff;
+  background: azure;
 }
 
 #footer-wrapper > .invert input[type="checkbox"] + label,
 #footer-wrapper > .invert input[type="radio"] + label {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert input[type="checkbox"] + label:before,
@@ -8335,8 +8178,8 @@ body.is-preload .items.onload-fade-in > * > .inner {
 
 #footer-wrapper > .invert input[type="checkbox"]:checked + label:before,
 #footer-wrapper > .invert input[type="radio"]:checked + label:before {
-  background-color: #ffffff;
-  border-color: #ffffff;
+  background-color: azure;
+  border-color: azure;
   color: #000000;
 }
 
@@ -8347,19 +8190,19 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #footer-wrapper > .invert ::-webkit-input-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #footer-wrapper > .invert :-moz-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #footer-wrapper > .invert ::-moz-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #footer-wrapper > .invert :-ms-input-placeholder {
-  color: #ffffff !important;
+  color: azure !important;
 }
 
 #footer-wrapper > .invert .icon.style2:before {
@@ -8382,7 +8225,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #footer-wrapper > .invert header p {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert table tbody tr {
@@ -8398,7 +8241,7 @@ body.is-preload .items.onload-fade-in > * > .inner {
 }
 
 #footer-wrapper > .invert table th {
-  color: #ffffff;
+  color: azure;
 }
 
 #footer-wrapper > .invert table thead {
