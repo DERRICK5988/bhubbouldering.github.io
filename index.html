@@ -72,10 +72,19 @@
     .hero-slider.hovered .base,
     .hero-slider:hover .base{opacity:0.6;transform:scale(1.02)}
   
-/* inline icon + label (Bhub) */
-.h-inline{display:inline-flex;align-items:center;gap:.5rem}
-.h-inline svg{width:1.1em;height:1.1em;stroke:#ff8a3d;stroke-width:2;fill:none}
-</style>
+/* === HERO marquee chips (right→left, slow) === */
+.chip-marquee{position:relative;overflow:hidden;padding:.25rem 0;
+  -webkit-mask-image:linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
+          mask-image:linear-gradient(to right, transparent, #000 7%, #000 93%, transparent)}
+.chip-track{display:inline-flex;gap:.75rem;width:max-content;animation:chipMarquee 36s linear infinite}
+.chip-marquee:hover .chip-track{animation-play-state:paused}
+@keyframes chipMarquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.chip{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid rgba(15,23,42,.12);
+  background:rgba(255,255,255,.88);backdrop-filter:blur(6px);border-radius:9999px;padding:.48rem .9rem;font-weight:600;font-size:.95rem;
+  box-shadow:0 8px 24px rgba(2,6,23,.06);transition:transform .2s ease, box-shadow .2s ease}
+.chip:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(2,6,23,.12)}
+
+  </style>
 </head>
 <body class="bg-white text-slate-900 overflow-hidden">
   <!-- Preloader -->
@@ -85,7 +94,7 @@
       <svg viewBox="0 0 120 120">
         <circle class="ring" cx="60" cy="60" r="44" fill="none" stroke="#ff8a3d" stroke-width="10"/>
         <circle class="ring2" cx="60" cy="60" r="44" fill="none" stroke="#ffb46b" stroke-width="10" opacity=".18"/>
-        <text x="60" y="78" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="50" font-weight="800" fill="#0f172a">B</text>
+        <text x="60" y="78" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="50" font-weight="800" fill="#0f172a" id="buhLetter">B</text>
       </svg>
     </div>
     <div class="dots"><i></i><i></i><i></i></div>
@@ -164,6 +173,25 @@
               First Timers: Book
             </a>
           </div>
+            <div class="mt-6 reveal">
+              <div class="chip-marquee" id="hero-badges" aria-label="Key features">
+                <div class="chip-track">
+                <span class="chip">Air-Conditioned</span>
+                <span class="chip">Parking Nearby</span>
+                <span class="chip">Coaching</span>
+                <span class="chip">Group Events</span>
+                <span class="chip">#OnlyAtBhub</span>
+                <span class="chip">Beginner Friendly</span>
+                <span class="chip">Air-Conditioned</span>
+                <span class="chip">Parking Nearby</span>
+                <span class="chip">Coaching</span>
+                <span class="chip">Group Events</span>
+                <span class="chip">#OnlyAtBhub</span>
+                <span class="chip">Beginner Friendly</span>
+                </div>
+              </div>
+            </div>
+
         </div>
         <div class="relative z-10 reveal">
           <div class="hero-slider aspect-[4/3] rounded-2xl bg-slate-200 shadow-soft">
@@ -178,22 +206,22 @@
     <section id="first-timer" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <h2 class="text-3xl font-bold">First Timer?</h2>
+          <h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.3L20 9l-4 4 .9 5.7L12 16l-4.9 2.7L8 13 4 9l5.4-.7L12 3z"/></svg><span>First Timer?</span></h2>
           <p class="mt-3 text-slate-600"><strong>What is bouldering?</strong> Rock climbing over soft foam mats up to ~4.5m. It’s accessible, thought‑provoking, social, and a great full‑body workout.</p>
         </div>
         <div class="grid lg:grid-cols-3 gap-6 mt-8">
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">The Climbs</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18l6-10 4 6 3-4 5 8H3z"></path></svg><span>The Climbs</span></h3>
             <p class="mt-2 text-sm text-slate-600">~80 problems rotated every ~5 weeks by our in‑house setters.</p>
             <img id="climbGalleryTrigger" class="mt-3 thumb-lg cursor-zoom-in" src="./images/climbs.jpg" alt="Long wall sector"/>
           </div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">Problem Solving</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 1 5 12c-1 1-2 2-2 4H9c0-2-1-3-2-4A7 7 0 0 1 12 2z"></path></svg><span>Problem Solving</span></h3>
             <p class="mt-2 text-sm text-slate-600">Each climb has a “beta”. Need help? Ask our crew for tips.</p>
             <img class="mt-3 thumb-lg" src="./images/problem.jpg" alt="Coaching assist"/>
           </div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">BHub Grading</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"></circle><path d="M8 12l-2 8 6-3 6 3-2-8"></path></svg><span>BHub Grading</span></h3>
             <p class="mt-2 text-sm text-slate-600">Follow the hold color and finish in control. Grades: B1 → Beast Tag. Wild Cards too!</p>
             <img class="mt-3 thumb-lg" src="./images/grading.jpg" alt="Grading chart"/>
           </div>
@@ -205,11 +233,11 @@
     <section id="pricing" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="reveal">
-          <h2 class="text-3xl font-bold">Pricing & Membership</h2>
+          <h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M3 10h18"></path><path d="M7 14h5"></path></svg><span>Pricing & Membership</span></h2>
         </div>
         <div class="mt-8 grid md:grid-cols-3 gap-6">
           <article class="reveal pcard">
-            <h3 class="text-lg font-semibold">Day Pass</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M7 12h10"></path></svg><span>Day Pass</span></h3>
             <div class="pprice">RM28–38</div>
             <ul class="mt-2 text-sm text-slate-600 space-y-1">
               <li><strong>Peak RM38</strong> · Weekdays 4–9pm (All day Weekends & PH)</li>
@@ -218,7 +246,7 @@
             </ul>
           </article>
           <article class="reveal pcard">
-            <h3 class="text-lg font-semibold">10‑Day Pass</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M16 3v4M8 3v4M3 11h18"></path></svg><span>10‑Day Pass</span></h3>
             <div class="pprice">RM330</div>
             <ul class="mt-2 text-sm text-slate-600 space-y-1">
               <li>Unlimited sharing (host present)</li>
@@ -226,13 +254,40 @@
             </ul>
           </article>
           <article class="reveal pcard">
-            <h3 class="text-lg font-semibold">Membership</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"></rect><circle cx="8.5" cy="12" r="2"></circle><path d="M12 16h6"></path></svg><span>Membership</span></h3>
             <div class="pprice">RM188–1,888</div>
             <ul class="mt-2 text-sm text-slate-600 space-y-1">
               <li>1 Month: <s>RM198</s> <strong>RM188</strong> (Admin fee RM100)</li>
               <li>3 Months: <s>RM588</s> <strong>RM488</strong></li>
               <li>12 Months: <s>RM1988</s> <strong>RM1,888</strong></li>
             </ul>
+          </article>
+        </div>
+        <div class="mt-6 grid md:grid-cols-3 gap-6">
+          <article class="reveal pcard">
+            <h3 class="text-lg font-semibold flex items-center gap-2">
+              <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="#ff8a3d" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="7" width="18" height="13" rx="2"></rect>
+                <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+              <span>Company Package</span>
+            </h3>
+            <div class="pprice">RM1,088</div>
+            <div class="mt-2 text-sm text-slate-600 space-y-2">
+              Private group booking for companies: a customised intro workshop and guided bouldering session,
+              scheduled and tailored with our team. Ideal for team bonding or wellness activities.
+            </div>
+            <div class="mt-4 text-xs text-slate-500">
+              *Details (time, capacity, add‑ons) are confirmed with our staff upon enquiry.
+            </div>
+            <div class="mt-5">
+              <a href="https://www.picktime.com/9e785e71-98bc-4f3e-8b8e-bbc2586c04c6/t/018d7340-ea85-458a-9143-5d596f9b8db7#classes/class"
+                target="_blank" rel="noopener"
+                class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-4 py-2 font-semibold hover:shadow-md transition">
+                Enquire now →
+              </a>
+            </div>
           </article>
         </div>
         <div class="mt-6 reveal flex flex-wrap gap-3">
@@ -245,7 +300,7 @@
         </div>
         <div class="mt-8 grid md:grid-cols-2 gap-6">
           <article class="reveal pcard">
-            <h3 class="text-lg font-semibold">Rentals</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg><span>Rentals</span></h3>
             <div class="pprice">RM11–RM11</div>
             <ul class="mt-2 text-sm text-slate-600 space-y-1">
               <li><strong>Shoes RM11</strong> (socks required)</li>
@@ -253,7 +308,7 @@
             </ul>
           </article>
           <article class="reveal pcard">
-            <h3 class="text-lg font-semibold">Trial Pack</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v8H4v-8z"></path><path d="M2 12h20"></path><path d="M12 12V7"></path></svg><span>Trial Pack</span></h3>
             <div class="pprice">RM58</div>
             <ul class="mt-2 text-sm text-slate-600 space-y-1">
               <li>2 entry passes</li>
@@ -265,19 +320,20 @@
       </div>
     </section>
 
+
     <!-- PROGRAMS -->
     <section id="programs" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal"><h2 class="text-3xl font-bold">Programs</h2><p class="mt-3 text-slate-600 max-w-prose">Learn the basics or sharpen your skills.</p></div>
+        <div class="reveal"><h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19c-3-2-7-2-10-1V6c3-1 7-1 10 1"></path><path d="M12 19c3-2 7-2 10-1V6c-3-1-7-1-10 1"></path><path d="M12 8v11"></path></svg><span>Programs</span></h2><p class="mt-3 text-slate-600 max-w-prose">Learn the basics or sharpen your skills.</p></div>
         <div class="mt-8 grid md:grid-cols-2 gap-6">
           <article class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="text-lg font-semibold">Bouldering 101: The Basics</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6a4 4 0 0 1 4-4h12v11H8a4 4 0 0 0-4 4z"></path></svg><span>Bouldering 101: The Basics</span></h3>
             <p class="mt-2 text-slate-600">Beginner class covering safety, movement and etiquette—feel confident and start climbing.</p>
             <img class="mt-3 rounded-xl shadow-soft w-full h-64 object-cover" src="./images/intro.jpg" alt="Intro coaching"/>
             <a href="https://www.picktime.com/home/bhubboulderingclassbooking" target="_blank" rel="noopener" class="mt-4 inline-flex text-[#ff7a1f] font-semibold">Enquire now →</a>
           </article>
           <article class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="text-lg font-semibold">Coaching Lessons</h3>
+            <h3 class="flex items-center gap-2 text-lg font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="3"></circle><path d="M2 21v-1a6 6 0 0 1 12 0v1"></path><path d="M16 12l4 4m0-4l-4 4"></path></svg><span>Coaching Lessons</span></h3>
             <p class="mt-2 text-slate-600">Learn from top coaches in Malaysia; personalise your progression and break plateaus.</p>
             <img class="mt-3 rounded-xl shadow-soft w-full h-64 object-cover" src="./images/coaching.jpg" alt="Coaching lesson"/>
             <a href="https://www.picktime.com/home/bhubboulderingclassbooking" target="_blank" rel="noopener" class="mt-4 inline-flex text-[#ff7a1f] font-semibold">Book coaching →</a>
@@ -289,20 +345,20 @@
     <!-- FACILITIES -->
     <section id="facilities" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal"><h2 class="text-3xl font-bold">Facilities</h2><p class="mt-3 text-slate-600">Training boards, gym area, café and work booths.</p></div>
+        <div class="reveal"><h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"></rect><path d="M7 8h10M7 12h10M7 16h10"></path></svg><span>Facilities</span></h2><p class="mt-3 text-slate-600">Training boards, gym area, café and work booths.</p></div>
         <div class="mt-8 grid md:grid-cols-3 gap-6">
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">Kilter Board</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="12" rx="2"></rect><path d="M4 9h16M10 3v12"></path><path d="M8 21l4-4 4 4"></path></svg><span>Kilter Board</span></h3>
             <p class="mt-2 text-sm text-slate-600">Illuminated holds via app & LED; train on pinches, crimps, slopers and more.</p>
             <img class="mt-3 rounded-xl shadow-soft w-full h-48 object-cover" src="./images/facility_kilter.jpg" alt="Kilter board"/>
           </div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">MoonBoard 2024</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path></svg><span>MoonBoard 2024</span></h3>
             <p class="mt-2 text-sm text-slate-600">Improve grip, contact and pulling power with near‑infinite problems.</p>
             <img class="mt-3 rounded-xl shadow-soft w-full h-48 object-cover" src="./images/facility_moon.jpg" alt="MoonBoard"/>
           </div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">Gym Equipment</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1.5" y="9" width="3" height="6" rx="1"></rect><rect x="19.5" y="9" width="3" height="6" rx="1"></rect><rect x="6" y="8" width="3" height="8" rx="1"></rect><rect x="15" y="8" width="3" height="8" rx="1"></rect><line x1="9" y1="12" x2="15" y2="12"></line></svg><span>Gym Equipment</span></h3>
             <p class="mt-2 text-sm text-slate-600">Well‑equipped fitness area to support your climbing training.</p>
             <img class="mt-3 rounded-xl shadow-soft w-full h-48 object-cover" src="./images/facility_gym.png" alt="Gym area"/>
           </div>
@@ -318,7 +374,7 @@
             <img class="mt-3 rounded-xl shadow-soft w-full h-64 object-cover" src="./images/cafe.jpg" alt="Cafe seating"/>
           </div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white card">
-            <h3 class="font-semibold">Call & Meeting Booths</h3>
+            <h3 class="flex items-center gap-2 font-semibold"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-5 w-5 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92V21a2 2 0 0 1-2.18 2A19 19 0 0 1 3 7.18 2 2 0 0 1 5 5h4.09a2 2 0 0 1 2 1.72l.57 3.43a2 2 0 0 1-.54 1.82L9.91 13a16 16 0 0 0 6.18 6.18l1.03-1.21a2 2 0 0 1 1.82-.54l3.43.57a2 2 0 0 1 1.72 2z"></path></svg><span>Call & Meeting Booths</span></h3>
             <p class="mt-2 text-sm text-slate-600">Quiet booths ideal for calls or work—great for freelancers or remote workers.</p>
           </div>
         </div>
@@ -328,7 +384,7 @@
     <!-- SHOP -->
     <section id="shop" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal"><h2 class="text-3xl font-bold">Pro Shop</h2><p class="mt-3 text-slate-600">Climbing shoes, gear and apparel—to help you climb your best.</p></div>
+        <div class="reveal"><h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l-1 12H7L6 7z"></path><path d="M9 7a3 3 0 0 1 6 0"></path></svg><span>Pro Shop</span></h2><p class="mt-3 text-slate-600">Climbing shoes, gear and apparel—to help you climb your best.</p></div>
         <div class="mt-8 overflow-hidden rounded-2xl shadow-soft">
           <img class="w-full h-[28rem] object-cover" src="./images/proshop.jpg" alt="Proshop wall"/>
         </div>
@@ -338,7 +394,7 @@
     <!-- FAQ -->
     <section id="faq" class="py-16">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal"><h2 class="text-3xl font-bold">FAQs</h2></div>
+        <div class="reveal"><h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M9.5 9a3 3 0 1 1 5 2c-1 .8-2 1-2 3"></path><path d="M12 17h.01"></path></svg><span>FAQs</span></h2></div>
         <div class="mt-6 grid md:grid-cols-2 gap-6">
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white"><h3 class="font-semibold">Do I need to book?</h3><p class="mt-2 text-sm text-slate-600">No—just walk in. We’re open daily.</p></div>
           <div class="reveal rounded-2xl border border-slate-200 p-6 bg-white"><h3 class="font-semibold">Is it kid‑friendly?</h3><p class="mt-2 text-sm text-slate-600">Suitable for kids 9+; ages 9–16 require guardian supervision.</p></div>
@@ -352,7 +408,7 @@
     <section id="visit" class="py-16 bg-slate-50">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-8 items-start">
         <div class="reveal">
-          <h2 class="text-3xl font-bold">Visit Us</h2>
+          <h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6-5.3-6-10a6 6 0 1 1 12 0c0 4.7-6 10-6 10z"></path><circle cx="12" cy="11" r="2"></circle></svg><span>Visit Us</span></h2>
           <p class="mt-3 text-slate-600">Address: <strong>4, Lorong 51a/227c, Seksyen 51a, 46100 Petaling Jaya, Selangor</strong></p>
           <p class="mt-2 text-sm text-slate-600">Mon–Fri: 11:00–23:00 · Sat–Sun & PH: 09:00–20:00</p>
           <div class="mt-4 grid sm:grid-cols-2 gap-4">
@@ -371,7 +427,7 @@
     <!-- CONTACT -->
     <section id="contact" class="py-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="reveal"><h2 class="text-3xl font-bold">Contact</h2><p class="mt-3 text-slate-600">Got questions about first‑time visits, classes, or private group bookings?</p></div>
+        <div class="reveal"><h2 class="text-3xl font-bold flex items-center gap-2"><svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6 flex-shrink-0" fill="none" stroke="#ff8a3d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path></svg><span>Contact</span></h2><p class="mt-3 text-slate-600">Got questions about first‑time visits, classes, or private group bookings?</p></div>
         <div class="mt-8 flex flex-wrap gap-3 reveal">
           <a href="mailto:hello@bhubbouldering.com" class="inline-flex items-center rounded-full bg-[#ff8a3d] text-white px-5 py-3 font-semibold shadow-soft hover:opacity-90">Email Us</a>
           <a target="_blank" href="https://wa.me/60143589188" class="inline-flex items-center rounded-full border border-slate-300 px-5 py-3 font-semibold hover:border-[#ff8a3d] hover:text-[#ff7a1f]">WhatsApp</a>
@@ -439,7 +495,24 @@
       }, {passive:true});
     }
 
-    // Preloader fade out after ~5s
+    
+    // BUH loader: cycle B -> U -> H with color + fade for 5s total
+    (function(){
+      const el = document.getElementById('buhLetter');
+      const pre = document.getElementById('preloader');
+      if(!el || !pre) return;
+      const seq=[{ch:'B',color:'#ff8a3d'},{ch:'H',color:'#ff0000'},{ch:'U',color:'#16a34a'}];
+      let i=0;
+      el.style.transition='opacity .25s ease';
+      el.setAttribute('fill',seq[0].color);el.textContent=seq[0].ch;
+      const tick=()=>{el.style.opacity='0';setTimeout(()=>{i=(i+1)%seq.length;el.textContent=seq[i].ch;el.setAttribute('fill',seq[i].color);el.style.opacity='1'},180)};
+      let h=setInterval(tick,600);
+      const stop=()=>{ if(h){ clearInterval(h); h=null; } };
+      const mo=new MutationObserver(()=>{ if(pre.classList.contains('fade-out')) stop(); });
+      mo.observe(pre,{attributes:true, attributeFilter:['class']});
+    })();
+
+    // Preloader fade out after ~3s post-load
     const pre = document.getElementById('preloader');
     window.addEventListener('load', () => setTimeout(() => {
       pre.classList.add('fade-out');
@@ -488,51 +561,6 @@
     const c = closeBtn();
     if (c) c.addEventListener('click', closeGallery);
   });
-</script>
-
-
-<script>
-// Map heading text to inline SVG (brand orange)
-const ICONS = {
-  "First Timer?":        '<svg viewBox="0 0 24 24"><path d="M12 3l2.5 5 5 .8-3.7 3.6.9 5.1L12 15.9 7.3 17.5l.9-5.1L4.5 8.8 9.5 8z"/></svg>',
-  "Pricing & Membership":'<svg viewBox="0 0 24 24"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12.99V4h8.99l8.41 8.59a2 2 0 0 1 0 2.82z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>',
-  "Programs":            '<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"></path><path d="M20 22V6a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 6.5v13"></path></svg>',
-  "Facilities":          '<svg viewBox="0 0 24 24"><path d="M3 21h18"></path><path d="M6 21V3h12v18"></path><path d="M9 7h6M9 11h6M9 15h6"></path></svg>',
-  "Pro Shop":            '<svg viewBox="0 0 24 24"><path d="M6 6h12l-1 14H7L6 6z"></path><path d="M9 6a3 3 0 0 1 6 0"></path></svg>',
-  "FAQs":                '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 2-3 4"></path><circle cx="12" cy="17" r="1"></circle></svg>',
-  "Visit Us":            '<svg viewBox="0 0 24 24"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 1 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>',
-  "Contact":             '<svg viewBox="0 0 24 24"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path></svg>',
-
-  "The Climbs":          '<svg viewBox="0 0 24 24"><path d="M3 19l7-12 7 12H3z"></path><path d="M14 13l-2-3-2 3"></path></svg>',
-  "Problem Solving":     '<svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-4 12c.4.4.7 1 .8 1.6L9 18h6l.2-2.4c.1-.6.4-1.2.8-1.6A7 7 0 0 0 12 2z"></path><path d="M9 18h6M10 22h4"></path></svg>',
-  "BHub Grading":        '<svg viewBox="0 0 24 24"><path d="M12 17.3L18.2 21l-1.6-7L22 9.2l-7.2-.6L12 2 9.2 8.6 2 9.2l5.5 4.7L5.8 21z"></path></svg>',
-
-  "Day Pass":            '<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="6" rx="2"></rect><rect x="4" y="14" width="10" height="6" rx="2"></rect></svg>',
-  "10‑Day Pass":         '<svg viewBox="0 0 24 24"><path d="M6 2v6M10 2v6"></path><rect x="3" y="8" width="18" height="12" rx="2"></rect></svg>',
-  "10-Day Pass":         '<svg viewBox="0 0 24 24"><path d="M6 2v6M10 2v6"></path><rect x="3" y="8" width="18" height="12" rx="2"></rect></svg>',
-  "Membership":          '<svg viewBox="0 0 24 24"><path d="M12 2a4 4 0 0 1 4 4v1h2a2 2 0 0 1 2 2v9a4 4 0 0 1-4 4H8a4 4 0 0 1-4-4V9a2 2 0 0 1 2-2h2V6a4 4 0 0 1 4-4z"></path></svg>',
-  "Rentals":             '<svg viewBox="0 0 24 24"><path d="M6 16l3-9 3 3 3-6 3 12"></path></svg>',
-  "Trial Pack":          '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"></rect><path d="M8 21h8"></path></svg>',
-  "Bouldering 101: The Basics": '<svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20"></path><path d="M20 22V6a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 6.5v13"></path></svg>',
-  "Coaching Lessons":    '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 6v12M6 12h12"></path></svg>',
-  "Kilter Board":        '<svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"></rect><rect x="13" y="3" width="8" height="8" rx="2"></rect><rect x="3" y="13" width="8" height="8" rx="2"></rect><rect x="13" y="13" width="8" height="8" rx="2"></rect></svg>',
-  "MoonBoard 2024":      '<svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-9-9 7 7 0 0 0 9 9z"></path></svg>',
-  "Gym Equipment":       '<svg viewBox="0 0 24 24"><rect x="2" y="9" width="3" height="6" rx="1"></rect><rect x="19" y="9" width="3" height="6" rx="1"></rect><rect x="7" y="10" width="10" height="4" rx="1"></rect></svg>',
-  "Call & Meeting Booths":'<svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.2 19a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2 4.2 2 2 0 0 1 4 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.27-1.17a2 2 0 0 1 2.11-.45c.95.24 1.9.52 2.81.7A2 2 0 0 1 22 16.9z"></path></svg>'
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('h2, h3').forEach(h => {
-    const label = h.textContent.trim();
-    const icon = ICONS[label];
-    if (!icon) return;
-    if (!h.classList.contains('h-inline')) {
-      h.classList.add('h-inline');
-      const text = h.innerHTML;
-      h.innerHTML = icon + '<span>' + text + '</span>';
-    }
-  });
-});
 </script>
 
 </body>
