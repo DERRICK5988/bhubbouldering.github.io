@@ -132,9 +132,9 @@
     .chip:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(2,6,23,.12)}
   </style>
 </head>
-<body class="bg-white text-slate-900 overflow-hidden">
+<body class="bg-white text-slate-900">
   <!-- Preloader -->
-  <div id="preloader" aria-busy="true" aria-live="polite">
+  <!-- <div id="preloader" aria-busy="true" aria-live="polite">
     <div class="bhub-logo" role="img" aria-label="Bhub loading">
       <svg viewBox="0 0 120 120">
         <circle class="ring" cx="60" cy="60" r="44" fill="none" stroke="#ff8a3d" stroke-width="10"/>
@@ -144,7 +144,7 @@
     </div>
     <div class="dots"><i></i><i></i><i></i></div>
     <div class="loader-text">Welcome to BHub</div>
-  </div>
+  </div> -->
 
   <!-- NAV -->
   <header id="topbar" class="fixed top-0 inset-x-0 z-50 nav-blur bg-white/80 border-b border-slate-200/60">
@@ -585,7 +585,7 @@
           <p class="mt-3 text-slate-600">Address: <strong>4, Lorong 51a/227c, Seksyen 51a, 46100 Petaling Jaya, Selangor</strong></p>
           <!-- UPDATED HOURS -->
           <p class="mt-2 text-sm text-slate-600 leading-6">
-            Mon - Fri 11:00 - 23:00<br />
+            Mon - Fri: 11:00 - 23:00<br />
             Sat, Sun, PH: 09:00 - 20:00
           </p>
 
@@ -698,28 +698,28 @@
       }, {passive:true});
     });
 
-    // BUH loader sequencing
-    (function(){
-      const el = document.getElementById('buhLetter');
-      const pre = document.getElementById('preloader');
-      if(!el || !pre) return;
-      const seq=[{ch:'B',color:'#ff8a3d'},{ch:'H',color:'#ff0000'},{ch:'U',color:'#16a34a'}];
-      let i=0;
-      el.style.transition='opacity .25s ease';
-      el.setAttribute('fill',seq[0].color);el.textContent=seq[0].ch;
-      const tick=()=>{el.style.opacity='0';setTimeout(()=>{i=(i+1)%seq.length;el.textContent=seq[i].ch;el.setAttribute('fill',seq[i].color);el.style.opacity='1'},180)};
-      let h=setInterval(tick,600);
-      const stop=()=>{ if(h){ clearInterval(h); h=null; } };
-      const mo=new MutationObserver(()=>{ if(pre.classList.contains('fade-out')) stop(); });
-      mo.observe(pre,{attributes:true, attributeFilter:['class']});
-    })();
+    // BBUH loader sequencing
+    // (function(){
+    //   const el = document.getElementById('buhLetter');
+    //   const pre = document.getElementById('preloader');
+    //   if(!el || !pre) return;
+    //   const seq=[{ch:'B',color:'#ff8a3d'},{ch:'H',color:'#ff0000'},{ch:'U',color:'#16a34a'}];
+    //   let i=0;
+    //   el.style.transition='opacity .25s ease';
+    //   el.setAttribute('fill',seq[0].color);el.textContent=seq[0].ch;
+    //   const tick=()=>{el.style.opacity='0';setTimeout(()=>{i=(i+1)%seq.length;el.textContent=seq[i].ch;el.setAttribute('fill',seq[i].color);el.style.opacity='1'},180)};
+    //   let h=setInterval(tick,600);
+    //   const stop=()=>{ if(h){ clearInterval(h); h=null; } };
+    //   const mo=new MutationObserver(()=>{ if(pre.classList.contains('fade-out')) stop(); });
+    //   mo.observe(pre,{attributes:true, attributeFilter:['class']});
+    // })();
 
     // Preloader fade out
-    const pre = document.getElementById('preloader');
-    window.addEventListener('load', () => setTimeout(() => {
-      pre.classList.add('fade-out');
-      document.body.classList.remove('overflow-hidden');
-    }, 3000));
+    // const pre = document.getElementById('preloader');
+    // window.addEventListener('load', () => setTimeout(() => {
+    //   pre.classList.add('fade-out');
+    //   document.body.classList.remove('overflow-hidden');
+    // }, 3000));
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
