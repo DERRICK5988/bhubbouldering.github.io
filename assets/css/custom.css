@@ -1,0 +1,22 @@
+/* assets/css/custom.css */
+
+/* Prevent the marquee content from forcing a wider-than-viewport layout */
+.chip-marquee { min-width: 0; }
+
+/* Phones: show FULL hero image (no crop) */
+@media (max-width: 640px) {
+  .hero-slider.hero-main > img {
+    object-fit: contain !important;
+    object-position: center !important;
+  }
+
+  /* Disable slide/zoom transforms on mobile */
+  .hero-slider.hero-main .base,
+  .hero-slider.hero-main .alt,
+  .hero-slider.hero-main.hovered .base,
+  .hero-slider.hero-main.hovered .alt,
+  .hero-slider.hero-main:hover .base,
+  .hero-slider.hero-main:hover .alt {
+    transform: none !important;
+  }
+}
