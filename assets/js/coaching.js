@@ -9,8 +9,8 @@
       focus: 'Footwork • Route reading • Confidence building',
       description: 'Adya Jaz guides first-time climbers through movement basics, cleaner foot placement, and simple route-reading cues so each climb feels more approachable, more enjoyable, and easier to understand from the start.',
       watermark: 'ADYA',
-      instagram: '@bhub.bouldering',
-      instagramUrl: 'https://www.instagram.com/bhub.bouldering/',
+      instagram: '@adyascends',
+      instagramUrl: 'https://www.instagram.com/adyascends?igsh=cHllc2wzeWpnemlm',
       stageImage: './images/coaches/coach-01-stage.png',
       stageHoverImage: './images/coaches/coach-01-stage-hover.png',
       stageAlt: 'Adya Jaz coaching portrait.',
@@ -40,6 +40,16 @@
   const focus = document.querySelector('[data-coach-focus]');
   const description = document.querySelector('[data-coach-description]');
   const instagram = document.querySelector('[data-coach-instagram]');
+  const initialInstagramText = instagram ? instagram.textContent.trim() : '';
+  const initialInstagramHref = instagram ? (instagram.getAttribute('href') || '').trim() : '';
+
+  if (initialInstagramText) {
+    coachData[0].instagram = initialInstagramText;
+  }
+
+  if (initialInstagramHref) {
+    coachData[0].instagramUrl = initialInstagramHref;
+  }
   const metricsWrap = document.querySelector('[data-coach-metrics]');
   const arrows = Array.from(document.querySelectorAll('[data-coach-arrow]'));
 

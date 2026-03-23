@@ -1332,9 +1332,22 @@
 
 .coach-review-strip {
   position: relative;
-  z-index: 5;
-  margin-top: clamp(0.4rem, 0.8vw, 0.8rem);
-  padding: clamp(2.4rem, 4vw, 3rem) 0 clamp(2rem, 3vw, 2.5rem);
+  z-index: 6;
+  margin-top: clamp(1rem, 1.8vw, 1.5rem);
+  padding: clamp(2.6rem, 4.2vw, 3.2rem) 0 clamp(2rem, 3vw, 2.5rem);
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(70% 120% at 0% 0%, rgba(255, 186, 122, 0.16), transparent 54%),
+    linear-gradient(180deg, rgba(255, 249, 243, 0.98) 0%, rgba(255, 255, 255, 0.995) 24%, #ffffff 100%);
+}
+
+.coach-review-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top: 1px solid rgba(16, 33, 63, 0.06);
+  pointer-events: none;
 }
 
 .coach-review-strip .site-shell {
@@ -1344,6 +1357,8 @@
 }
 
 .coach-review-strip__intro {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 0.35rem;
   max-width: 33rem;
@@ -1366,6 +1381,8 @@
 }
 
 .coach-review-strip__marquee {
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   padding-block: 0.35rem 0.15rem;
   -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent);
